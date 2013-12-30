@@ -1,0 +1,37 @@
+﻿@model eMngr.Models.ProductModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <fieldset>
+        <legend>ProductModel</legend>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.sku)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.sku)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Description)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Description)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
